@@ -12,17 +12,18 @@ def bmicalculator():
     
     bmi_output=[(16, 'severely underweight'), (18.5, 'underweight'),
                   (25, 'normal'), (30, 'overweight'),
-                  (35, 'Moderately obese'), (float('inf'), 'severely obese')]
+                  (35, 'moderately obese'), (float('inf'), 'severely obese')]
     
     for tuple1,tuple2 in bmi_output:
         if bmi<=tuple1:
             put_text('BMI Standard Chart : ')
             put_table([
-            {"BMI":"Below 18.5", "Category": "Underweight"},
-            {"BMI":"Between 18.5 and 24.9", "Category": "Healthy"},
-            {"BMI":"Between 25 and 29.9", "Category": "Overweight"},
-            {"BMI":"Between 30 and 39.9", "Category": "Obese"},
-            {"BMI":"Above 39.9", "Category": "Extremely Obese"}], header=["BMI", "Category"]) 
+            {"BMI":"Below 16", "Category": "Extremely Underweight"},
+            {"BMI":"Between 16 and 18.5", "Category": "Underweight"},
+            {"BMI":"Between 18.5 and 25", "Category": "Normal"},
+            {"BMI":"Between 25 and 30", "Category": "Overweight"},
+            {"BMI":"Between 30 and 35", "Category": "Moderately Obese"},
+            {"BMI":"Above 35", "Category": "Extremely Obese"}], header=["BMI", "Category"]) 
 
             put_markdown('**Your Body Mass Index (BMI) is %.1f and you are considered to be %s.**'%(bmi,tuple2))
 
